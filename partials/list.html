@@ -1,0 +1,42 @@
+<section class="">
+  <div class="search">
+    <h1>Time Log</h1>
+    <label>search: </label>
+	<!--
+    <input type="date" ng-model="query" placeholder="Set date filter" autofocus>
+
+    <label class="formgroup">Order:
+      <select ng-model="Order">
+        <option value="start">Start</option>
+        <option value="finish">Finish</option>
+        <option value="title">Title</option>
+        <option value="task_id">Task ID</option>
+      </select>
+    </label>
+	-->
+
+    <label class="formgroup">
+      <input type="radio" ng-model="direction" name="direction" checked>
+      ascending
+     </label>
+    <label class="formgroup">
+      <input type="radio" ng-model="direction" name="direction" value="reverse">
+      descending
+    </label>
+ 
+  </div>
+  <ul class="" ng-controller="ListController">
+    <li ng-repeat="item in time_log">
+      <!-- <a href="#/details/{{timelog.indexOf(item)}}"> -->
+        <div class="info">
+          <h2>{{item.time_log_id}}</h2>
+          <h3>{{item.start}}</h3>
+          <h3>{{item.finish}}</h3>
+          <h3>{{item.duration}}</h3>
+          <h3>{{item.title}}</h3>
+          <h3>{{item.task_id}}</h3>
+        </div>
+      </a>
+    </li>
+  </ul>  
+</section>
